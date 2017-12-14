@@ -1,7 +1,7 @@
 package com.example.techphenom.tasktimer;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
+import android.support.v7.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements CursorRecyclerVie
         args.putLong("TaskId", task.getId());
 
         dialog.setArguments(args);
-        dialog.show(getFragmentManager(), null);
+        dialog.show(getSupportFragmentManager(), null);
     }
 
     private void taskEditRequest(Task task){
@@ -244,7 +244,7 @@ public class MainActivity extends AppCompatActivity implements CursorRecyclerVie
             args.putInt(AppDialog.DIALOG_NEGATIVE_RID, R.string.cancelEditDiag_negative_caption);
 
             dialog.setArguments(args);
-            dialog.show(getFragmentManager(), null);
+            dialog.show(getSupportFragmentManager(), null);
         }
     }
 

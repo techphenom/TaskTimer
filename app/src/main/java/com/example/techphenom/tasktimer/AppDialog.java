@@ -1,18 +1,20 @@
 package com.example.techphenom.tasktimer;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatDialogFragment;
 import android.util.Log;
 
 /**
  * Created by techphenom on 11/15/17.
+ *
  */
 
-public class AppDialog extends DialogFragment {
+public class AppDialog extends AppCompatDialogFragment {
     private static final String TAG = "AppDialog";
 
     public static final String DIALOG_ID = "id";
@@ -53,6 +55,7 @@ public class AppDialog extends DialogFragment {
         mDialogEvents = null;
     }
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Log.d(TAG, "onCreateDialog: starts");

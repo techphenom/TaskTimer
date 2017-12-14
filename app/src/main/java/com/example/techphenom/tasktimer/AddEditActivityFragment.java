@@ -54,8 +54,6 @@ public class AddEditActivityFragment extends Fragment {
         mSaveListener = (OnSaveClicked) activity;
     }
 
-
-
     @Override
     public void onDetach() {
         Log.d(TAG, "onDetach: starts");
